@@ -1,0 +1,21 @@
+[http]
+sslCAInfo = C:/L1/Zcer.crt
+sslBackend = schannel
+[http]
+proxy = http://gateway.zscaler.net:443
+sslverify = true
+postBuffer = 157286400
+[https]
+proxy = http://gateway.zscaler.net:443
+sslverify = true
+[url "https://github.com/"]
+[credential "https://gitlab-ust.stackroute.in"]
+	provider = gitlab
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Bellambharath
+	email = bharathyadav620@gmail.com
